@@ -1,5 +1,7 @@
 
-package interfaces;
+package classes;
+
+import interfaces.IReceiver;
 
 public abstract class BaseServer implements Runnable{
     

@@ -1,7 +1,7 @@
 
 package client;
 
-import interfaces.BaseClient;
+import classes.BaseClient;
 import interfaces.IMessenger;
 import java.io.DataOutputStream;
 import java.io.IOException;

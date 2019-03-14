@@ -1,7 +1,7 @@
 
 package server;
 
-import interfaces.BaseServer;
+import classes.BaseServer;
 import interfaces.IReceiver;
 import java.io.IOException;
 import java.net.DatagramPacket;
