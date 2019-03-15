@@ -3,16 +3,14 @@ package server;
 
 import interfaces.IReceiver;
 import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.ObjectInputStream;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 
-public class TCPDelegate implements Runnable{
+class TCPDelegate implements Runnable{
 
     private final Socket client;
     private final IReceiver receiver;

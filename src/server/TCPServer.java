@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 
-public class TCPServer extends BaseServer{
+class TCPServer extends BaseServer{
 
     private final ServerSocket server;
     private TCPDelegate delegate;
@@ -19,7 +19,7 @@ public class TCPServer extends BaseServer{
     }
 
     @Override
-    protected void process() {
+    public void process() {
         try {
             
             System.out.println("-TCP Server- Waiting for clients....");
@@ -34,14 +34,12 @@ public class TCPServer extends BaseServer{
     }
 
     @Override
-    protected void closeServer() {
+    public void closeServer() {
         try {
             this.server.close();
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
     }
-
-    
     
 }

@@ -35,8 +35,8 @@ public abstract class BaseServer implements Runnable{
         closeServer();
     }
     
-    protected abstract void process();
+    public abstract void process();
     
-    protected abstract void closeServer();
+    public abstract void closeServer();
     
 }

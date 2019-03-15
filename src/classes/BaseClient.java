@@ -21,7 +21,7 @@ public abstract class BaseClient implements Runnable{
     protected Queue<String> queue;
     
 
-    public BaseClient(IMessenger messenger, int port, String ipHost) {
+    public BaseClient(int port, String ipHost, IMessenger messenger) {
         this.messenger = messenger;
         this.port = port;
         this.ipHost = ipHost;

@@ -10,9 +10,8 @@ import java.net.InetAddress;
 import java.net.SocketException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class UDPServer extends BaseServer{
+class UDPServer extends BaseServer{
     
     private final DatagramSocket server;
     private final DatagramPacket receivePacket;
@@ -27,12 +26,12 @@ public class UDPServer extends BaseServer{
     
     
     @Override
-    protected void process() {
+    public void process() {
         try {
             
             // UDP Data
             this.server.receive(receivePacket);
-            String sentence = new String( receivePacket.getData());
+            String sentence = new String( receivePacket.getData() );
             // Communication data
             InetAddress address = receivePacket.getAddress();
             int udpPort = receivePacket.getPort();
@@ -44,13 +43,9 @@ public class UDPServer extends BaseServer{
             // TODO: close
         }
     }
-    
-    public void SendBroadcast(){
-        throw new NotImplementedException();
-    }
 
     @Override
-    protected void closeServer() {
+    public void closeServer() {
         this.server.close();
     }
     
